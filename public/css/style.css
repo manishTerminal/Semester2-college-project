@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+:root {
+	--dark-color-a: rgb(13,40,33);
+	--dark-color-b: #1994aa;
+	--light-color: #ffffff;
+	--success-color: #0ef10e;
+	--error-color: #ff0800;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Acme', sans-serif;
+	font-size: 16px;
+	background: var(--light-color);
+	margin: 0px;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.btn {
+	cursor: pointer;
+	padding: 5px 24px;
+	background: var(--light-color);
+	color: var(--dark-color-a);
+	border: 0;
+	font-size: 17px;
+
+}
+.chat-container {
+	width: 100%;
+	background: rgb(255, 255, 255);
+	overflow: hidden;
+}
+.colbtn{
+	background-color: #1994aa;
+}
+
+.chat-header {
+	background: var(--dark-color-a);
+	color: #fff;
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.chat-main {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	height: 77vh;
+}
+
+.chat-sidebar {
+	background: var(--dark-color-b);
+	color: #fff;
+	padding: 20px 20px 60px;
+	overflow-y: scroll;
+}
+
+.chat-sidebar h2 {
+	font-size: 20px;
+	background: rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	margin-bottom: 20px;
+}
+
+.chat-sidebar h3 {
+	margin-bottom: 15px;
+}
+
+.chat-sidebar ul li {
+	padding: 10px 0;
+}
+
+.chat-messages {
+	padding: 30px;
+	max-height: 500px;
+	overflow-y: scroll;
+}
+
+.chat-messages .message {
+	padding: 5px;
+	margin-bottom: 5px;
+	background-color: var(--light-color);
+	border-radius: 12px;
+	overflow-wrap: break-word;
+}
+
+.chat-messages .message .meta {
+	font-size: 20px;
+	font-weight: bold;
+	color: var(--dark-color-b);
+	opacity: 0.7;
+}
+.chat-messages .message .meta span {
+	color: rgb(0, 0, 0);
+}
+.chat-form-container {
+	padding: 20px 30px;
+	background-color: var(--dark-color-a);
+}
+
+.chat-form-container form {
+	display: flex;
+}
+
+.chat-form-container input[type='text'] {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	flex: 1;
+}
+.join-container {
+	max-width: 800px;
+	margin: 80px auto;
+	color: #fff;
+}
+
+.join-header {
+	text-align: center;
+	padding: 20px;
+	background: var(--dark-color-a);
+}
+#username, #room, #msg{
+	border-radius: 16px;
+}
+.join-main {
+	padding: 30px 120px;
+}
+
+.join-main p {
+	margin-bottom: 20px;
+}
+
+.join-main .form-control {
+	margin-bottom: 20px;
+}
+
+.join-main label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.join-main input[type='text'] {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+}
+
+.join-main select {
+	font-size: 16px;
+	padding: 5px;
+	height: 40px;
+	width: 100%;
+}
+
+.join-main .btn {
+	margin-top: 20px;
+	width: 100%;
+}
+
+@media (max-width: 700px) {
+	.chat-main {
+		display: block;
+	}
+
+	.chat-sidebar {
+		display: none;
+	}
+} 
+  .logo {
+	width: 60px;
+	margin-top: -10px;
+  }
+  
+  .nav {
+	display: flex;
+	justify-content: center;
+	padding: 10px 0;
+  }
+  
+  ul {
+	display: flex;
+	padding-inline-start: 0;
+  }
+  
+  li {
+	list-style-type: none;
+	padding: 20px;
+  }
+  
+  .row {
+	display: flex;
+	flex-wrap: wrap;
+  }
+  
+  .container {
+	width: 20%;
+	position: relative;
+	transition: transform 500ms;
+	display: block;
+  }
+  
+  .container img {
+	width: 100%;
+	opacity: 1;
+	border-radius: 8px;
+	height: auto;
+	display: block;
+	border: 1px solid black;
+  }
+  
+  .row .container:focus,
+  .row .container:hover {
+	transform: scale(1.5);
+	z-index: 1;
+  }
+  
+  .middle {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 100%;
+	left: 100%;
+	width: 100%;
+	height: 100%;
+	transform: translate( -100%, -100%);
+	text-align: center;
+	border-radius: 8px;
+  }
+  
+  .container:hover .middle {
+	opacity: 1;
+  }
+  .tn{
+	  color: white !important;
+  }
+  .text {
+	color: rgb(0, 0, 0);
+	font-size: 32px;
+	padding: 8px 16px;
+  }
+  
+  .footer {
+	display: flex;
+	justify-content: center;
+	padding: 30px 0;
+	width: 100%;
+  }
+  
+  a {
+	text-decoration: none;
+	color: black;
+  }
+  
+  @media only screen and (max-width: 1500px) {
+	.text {
+	  font-size: 10px;
+	  padding: 32px 16px;
+	}
+  
+	.footer {
+	  position: relative;
+	  bottom: 0;
+	}
+  }
+  
+  @media only screen and (max-width: 800px) {
+   .extra-item {
+	 display: none;
+   }
+  
+   .container {
+	 width: 100%;
+   }
+  
+   .row .container:focus,
+   .row .container:hover {
+	 transform: none;
+	 z-index: 1;
+   }
+  
+   .footer {
+	 position: fixed;
+   }
+  
+   .text {
+	font-size: 32px;
+	padding: 32px 16px;
+  }
+}
+  
