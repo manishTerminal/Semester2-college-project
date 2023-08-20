@@ -1,3 +1,1 @@
-# Collegemate--college-project
-
-Link to the project website: -  https://manish-college.herokuapp.com/
+college sem 2 project
